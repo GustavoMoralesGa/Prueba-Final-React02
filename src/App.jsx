@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import { PizzasProvider } from './PizzasContext'
+import { ProvidePizzas } from './PizzasContext'
 import Details from './pages/Details'
 import OrderDetails from './pages/OrderDetails'
 import Home from './pages/Home'
@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound'
 export default function App() {
   return (
     <BrowserRouter>
-      <PizzasProvider>
+      <ProvidePizzas>
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
@@ -17,7 +17,7 @@ export default function App() {
           <Route path='/carrito' element={<OrderDetails />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
-      </PizzasProvider>
+      </ProvidePizzas>
     </BrowserRouter>
   )
 }
