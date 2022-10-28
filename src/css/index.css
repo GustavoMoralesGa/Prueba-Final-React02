@@ -1,0 +1,12 @@
+
+/* HEADER */
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/premium-photo/tasty-pepperoni-pizza-black-concrete-background_79782-103.jpg?w=2000);
+  background-size: cover;
+  height: 200px;
+}
+
+.title, .subTitle {
+  color: white;
+}
