@@ -1,13 +1,13 @@
 import { useContext } from "react";
 import { Container, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import pizzasContext from "../PizzaContext";
+import pizzasContext from "../context/PizzaContext";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
 
-const Card = () => {
-  const { pizzas, addCart } = useContext(pizzasContext)
+const Cards = () => {
+  const { pizzas, addToCart } = useContext(pizzasContext)
   const navigate = useNavigate()
 
   return (
@@ -40,7 +40,7 @@ const Card = () => {
             </Button>
 
             <Button variant="dark"
-              onClick={() => addCart(pizza)}
+              onClick={() => addToCart(pizza)}
             >
               Añadir 🛒            
             </Button>
@@ -49,7 +49,6 @@ const Card = () => {
       ))}
     </Container>
   )
-
-
-
 }
+
+export default Cards;

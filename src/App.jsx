@@ -1,10 +1,12 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { ProvidePizzas } from './context/PizzaContext'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar'
-import { ProvidePizzas } from './PizzasContext'
-import Details from './pages/Details'
-import OrderDetails from './pages/OrderDetails'
-import Home from './pages/Home'
-import NotFound from './pages/NotFound'
+import Details from './views/Details'
+import OrderDetails from './views/DetailPrice'
+import Home from './views/Home'
+import NotFound from './views/NotFound'
+
 
 export default function App() {
   return (
@@ -17,7 +19,7 @@ export default function App() {
           <Route path='/carrito' element={<OrderDetails />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
-      </ProvidePizzas>
+      </ProvidePizzas> 
     </BrowserRouter>
   )
 }
