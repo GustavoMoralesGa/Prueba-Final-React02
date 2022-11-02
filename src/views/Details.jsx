@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from "react";
-import { Button, Card, ListGroup } from "react-bootstrap";
+import { Button, Card, Container, ListGroup } from "react-bootstrap";
 import { useParams, Link } from "react-router-dom";
 import pizzasContext from '../context/PizzaContext'
 
@@ -19,9 +19,9 @@ const Details = () => {
   return (
     <>
       {pizza ? (
-        <div>
-          <Card key={pizza[0].id}>
-              <Card.Header as="h5"><Card.Img variant="top" src={pizza[0].img} /></Card.Header>
+        <Container className="detailContainer">
+          <Card key={pizza[0].id} style={{width: '22rem'}}>
+              <Card.Header><Card.Img variant="top" src={pizza[0].img} /></Card.Header>
               <Card.Body>
                 <Card.Title>{pizza[0].name}</Card.Title>
                 <Card.Text>
@@ -44,18 +44,21 @@ const Details = () => {
                   </ListGroup>
                   <Card.Text>Valor: ${pizza[0].price}</Card.Text>
                       
-                  <Button onClick={() => addToCart(pizza[0])}>
+                  <Button 
+                    className="detailButton"
+                    variant="dark"
+                    onClick={() => addToCart(pizza[0])}>
                         Añadir 🛒
                   </Button>
                   <Link to='/'>
-                    <Button>
+                    <Button variant="dark">
                           Volver
                     </Button>
                   </Link>
                 </Card.Text>
             </Card.Body>
           </Card>
-        </div>
+        </Container>
       ) : null }  
     </>
   )

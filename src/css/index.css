@@ -8,5 +8,47 @@
 }
 
 .title, .subTitle {
+  padding-top: 10px;
   color: white;
 }
+
+
+
+/* NAVBAR */
+
+.cartFormat {
+  text-decoration: none !important;
+  color: white;
+}
+
+/* CARD */
+
+.card {
+  margin: 10px;
+  margin: solid;
+}
+
+.cardBody {
+  text-align: center;
+}
+
+.verButton {
+  margin-bottom: 10px;
+}
+
+/* DETAILS Pizza */
+
+.detailButton {
+  margin-right: 10px;
+}
+
+/* Detail PRICE */
+
+.footerTotal {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-top: groove 1px rgba(0, 0, 0, 0.322);
+}
+
+

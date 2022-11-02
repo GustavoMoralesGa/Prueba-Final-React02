@@ -16,23 +16,26 @@ export default function Navbar() {
   )
 
   return (
-    <NavbarBootstrap bg="primary" variant="dark">
+    <NavbarBootstrap bg="black" variant="dark">
         <Container>
-          <NavbarBootstrap.Brand>Pizzeria Mamma Mía!</NavbarBootstrap.Brand>
           <Nav className="me-auto">
             <NavLink className={setActiveClass} to='/'>
               <img
-              src='https://w7.pngwing.com/pngs/427/304/png-transparent-pizza-sticker-cartoon-drawing-pizza-food-fruit-food-drinks.png'
-              width='40'
-              height='40'
+              src='https://cdn4.vectorstock.com/i/thumb-large/20/08/logo-of-a-sketched-pizza-vector-24432008.jpg'
+              width='100'
+              height='100'
               />
               {' '}
             </NavLink>
+            <div>
+            <NavbarBootstrap.Brand><strong>¡Mamma Mía! </strong>Pizza</NavbarBootstrap.Brand>
+            
+            </div>
             <NavLink className={setActiveClass} to='/carrito'>
-              <h4 className='mb-0'>
+              <h3 className='cartFormat'>
               {' '}
               🛒 {''} $ {formatNumber(total)}
-              </h4>
+              </h3>
             </NavLink>
           </Nav>
         </Container>
