@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <NavbarBootstrap bg="primary" variant="dark">
         <Container>
-          <NavbarBootstrap.Brand href="#home">Pizzeria Mamma Mía!</NavbarBootstrap.Brand>
+          <NavbarBootstrap.Brand>Pizzeria Mamma Mía!</NavbarBootstrap.Brand>
           <Nav className="me-auto">
             <NavLink className={setActiveClass} to='/'>
               <img

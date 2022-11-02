@@ -38,17 +38,19 @@ const OrderDetails = () => {
                 <Button onClick={() => increase(i)}>
                   Agregar
                 </Button>
-              </div>
-                <Button>Ir a pagar</Button> 
-                <h2>Total: ${formatNumber(total)}</h2>
-              <div>
-                <Link to='/'>
-                  <Button>Volver</Button>
-                </Link>
               </div> 
             </div>       
           ))}
         </div>
+      </div>
+      <div>
+        <Button>Ir a pagar</Button> 
+        <h2>Total: ${formatNumber(total)}</h2>
+      </div>
+      <div>
+        <Link to='/'>
+          <Button>Volver</Button>
+        </Link>
       </div>
     </>
   )
