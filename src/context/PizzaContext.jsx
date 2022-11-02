@@ -1,6 +1,6 @@
 import { createContext, useState, useEffect } from "react";
 
-const pizzasContext = createContext();
+const PizzasContext = createContext();
 
 const ProvidePizzas = ({children}) => {
   const [pizzas, setPizzas] = useState([]);
@@ -51,7 +51,7 @@ const ProvidePizzas = ({children}) => {
   };
 
   return (
-    <pizzasContext.Provider
+    <PizzasContext.Provider
       value={{
         pizzas,
         shopCart,
@@ -62,10 +62,10 @@ const ProvidePizzas = ({children}) => {
       }}
     >
       {children}
-    </pizzasContext.Provider>
+    </PizzasContext.Provider>
   );
 };
 
 export { ProvidePizzas };
 
-export default pizzasContext;
+export default PizzasContext;

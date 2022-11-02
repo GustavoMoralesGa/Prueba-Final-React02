@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CardGroup, Container, ListGroup, ListGroupItem } from "react-bootstrap";
+import { CardGroup, ListGroup, ListGroupItem } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import pizzasContext from "../context/PizzaContext";
 import Button from 'react-bootstrap/Button';
@@ -18,21 +18,19 @@ const Cards = () => {
           <Card.Body className="cardBody">
             <Card.Title>{pizza.name}</Card.Title>
             <Card.Subtitle>Ingredientes</Card.Subtitle>
-            <Card.Text>
-              <ListGroup variant='flush'>
-                {pizza.ingredients.map((ingredient, i) => (
-                  <ListGroupItem 
-                    className='border-0 text-capitalize'
-                    key={ i }
-                  >
-                    🍕
-                    {ingredient}
-                  </ListGroupItem>
-                ))}
-              </ListGroup>
-            </Card.Text>
-            <Card.Text>
-              <h2>$ {pizza.price}</h2>
+            <ListGroup variant='flush'>
+              {pizza.ingredients.map((ingredient, i) => (
+                <ListGroupItem 
+                  className='border-0 text-capitalize'
+                  key={ i }
+                >
+                  🍕
+                  {ingredient}
+                </ListGroupItem>
+              ))}
+            </ListGroup>
+            <Card.Text as="h2">
+              ${pizza.price}
             </Card.Text>
             <Button className="verButton" variant="dark"
               onClick={() => navigate(`/pizza/${pizza.id}`)}
